@@ -13,7 +13,18 @@ https://nodejs-express-demo.herokuapp.com/
 ## Environment variables:
 
 ```java
-
+TWITTER_CLIENTID=<ID>
+TWITTER_SECRET=<SECRET>
+GITHUB_CLIENTID=<ID>
+GITHUB_SECRET=<SECRET>
+LINKEDIN_CLIENTID=<ID>
+LINKEDIN_SECRET=<SECRET>
+GOOGLE_CLIENTID=<ID>
+GOOGLE_SECRET=<SECRET>
+IMAGER_S3_KEY=AWS_S3_KEY
+IMAGER_S3_SECRET=AWS_S3_SECRET
+IMAGER_S3_BUCKET=AWS_S3_BUCKET
+MONGO_URI=mongodb://mongo:27017/noobjs_dev
 ```
 
 ## GitHub
@@ -107,12 +118,12 @@ If you make any changes to the file, nodemon should automatically pick up and re
 To run tests
 
 ```sh
-docker-compose exec -e MONGODB_URL=mongodb://mongo:27017/noobjs_test node npm test
+docker-compose exec -e MONGO_URI=mongodb://mongo:27017/noobjs_test node npm test
 ```
 
 Note that we are overriding the environment variable set in `.env` file because we don't want our data erased by the tests.
 
-Note: The difference between exec and run is that, exec executes the command within the running container and run will spin up a new container to run that command. So if you want to run only the tests without docker-compose up, you may do so by running `docker-compose run -e MONGODB_URL=mongodb://mongo:27017/noobjs_test node npm test`
+Note: The difference between exec and run is that, exec executes the command within the running container and run will spin up a new container to run that command. So if you want to run only the tests without docker-compose up, you may do so by running `docker-compose run -e MONGO_URI=mongodb://mongo:27017/noobjs_test node npm test`
 
 ## License
 
