@@ -1,3 +1,32 @@
+# node-express-mongoose-demo
+
+# 🚀 a blog application where users can signup, create an article, delete an article and add comments etc 🚀
+
+https://github.com/coding-to-music/node-express-mongoose-demo
+
+https://node-express-mongoose-demo.vercel.app
+
+From / By https://github.com/madhums/node-express-mongoose-demo
+
+https://nodejs-express-demo.herokuapp.com/
+
+## Environment variables:
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/node-express-mongoose-demo.git
+git push -u origin main
+```
 
 [![Build Status](https://travis-ci.com/madhums/node-express-mongoose-demo.svg?branch=master)](https://travis-ci.com/madhums/node-express-mongoose-demo)
 [![Dependencies](https://img.shields.io/david/madhums/node-express-mongoose-demo.svg?style=flat)](https://david-dm.org/madhums/node-express-mongoose-demo)
