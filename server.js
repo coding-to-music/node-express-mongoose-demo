@@ -48,6 +48,8 @@ function listen() {
 }
 
 function connect() {
+  console.log("about to connect to mongo");
+
   mongoose.connection
     .on('error', console.log)
     .on('disconnected', connect)
