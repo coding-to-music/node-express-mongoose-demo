@@ -5,7 +5,7 @@
  */
 
 // import aws from "aws-sdk";
-const aws = require("aws-sdk");
+const aws = require('aws-sdk');
 
 const mongoose = require('mongoose');
 const notify = require('../mailer');
@@ -16,8 +16,8 @@ const notify = require('../mailer');
 
 const Schema = mongoose.Schema;
 
-const getTags = tags => tags.join(',');
-const setTags = tags => {
+const getTags = (tags) => tags.join(',');
+const setTags = (tags) => {
   if (!Array.isArray(tags)) return tags.split(',').slice(0, 10); // max tags
   return [];
 };
@@ -81,6 +81,9 @@ ArticleSchema.methods = {
    */
 
   uploadAndSave: function(/*image*/) {
+
+    console.log('article.js uploadAndSave the image');
+
     const err = this.validateSync();
     if (err && err.toString()) throw new Error(err.toString());
     return this.save();
@@ -97,6 +100,12 @@ ArticleSchema.methods = {
       self.save(cb);
     }, 'article');
     */
+
+
+    // if (images && !images.length) {
+    //   console.log("article.js uploadAndSave the image");
+    // return this.save();
+    // }
 
     // aws.config.update({
     //   accessKeyId: process.env.NEMD_AWS_ACCESS_KEY,
