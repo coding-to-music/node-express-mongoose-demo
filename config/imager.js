@@ -23,9 +23,9 @@ module.exports = {
 
   storage: {
     S3: {
-      key: process.env.IMAGER_S3_KEY,
-      secret: process.env.IMAGER_S3_SECRET,
-      bucket: process.env.IMAGER_S3_BUCKET
+      key: process.env.NEMD_AWS_ACCESS_KEY,
+      secret: process.env.NEMD_AWS_SECRET_KEY,
+      bucket: process.env.NEMD_AWS_BUCKET_NAME
     }
   },
 

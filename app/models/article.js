@@ -4,6 +4,9 @@
  * Module dependencies.
  */
 
+// import aws from "aws-sdk";
+const aws = require("aws-sdk");
+
 const mongoose = require('mongoose');
 const notify = require('../mailer');
 
@@ -94,6 +97,21 @@ ArticleSchema.methods = {
       self.save(cb);
     }, 'article');
     */
+
+    // aws.config.update({
+    //   accessKeyId: process.env.NEMD_AWS_ACCESS_KEY,
+    //   secretAccessKey: process.env.NEMD_AWS_SECRET_KEY,
+    //   region: process.env.NEMD_AWS_REGION,
+    //   signatureVersion: "v4",
+    // });
+  
+    // // const s3 = new aws.S3();
+  
+    // const s3 = new aws.S3({
+    //   accessKeyId: process.env.NEMD_AWS_ACCESS_KEY,
+    //   secretAccessKey: process.env.NEMD_AWS_SECRET_KEY,
+    // });
+
   },
 
   /**

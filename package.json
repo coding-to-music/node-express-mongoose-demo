@@ -27,6 +27,7 @@
     "prod": "pm2-runtime start ecosystem.config.js --env production"
   },
   "dependencies": {
+    "aws-sdk": "^2.1272.0",
     "bcrypt": "^5.0.1",
     "body-parser": "~1.19.0",
     "co": "~4.6.0",
