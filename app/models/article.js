@@ -58,7 +58,9 @@ ArticleSchema.path('body').required(true, 'Article body cannot be blank');
 
 ArticleSchema.pre('remove', function(next) {
   // const imager = new Imager(imagerConfig, 'S3');
-  // const files = this.image.files;
+  const files = this.image.files;
+
+  console.log('app-models-article.js-ArticleSchema.pre: files', files);
 
   // if there are files associated with the item, remove from the cloud too
   // imager.remove(files, function (err) {
@@ -83,6 +85,10 @@ ArticleSchema.methods = {
   uploadAndSave: function(/*image*/) {
 
     console.log('article.js uploadAndSave the image');
+    console.log('article.js uploadAndSave images', this.images);
+    // console.log('article.js uploadAndSave images.length', this.images.length);
+    console.log('article.js uploadAndSave cdnUri', this.cdnUri);
+    console.log('article.js uploadAndSave files', this.files);
 
     const err = this.validateSync();
     if (err && err.toString()) throw new Error(err.toString());
