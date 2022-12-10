@@ -82,7 +82,7 @@ ArticleSchema.methods = {
    * @api private
    */
 
-  uploadAndSave: function(/*image*/) {
+  uploadAndSave: function(image) {
 
     console.log('article.js uploadAndSave the image');
     console.log('article.js uploadAndSave images', this.images);
